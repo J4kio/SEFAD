@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEFAD | Director </title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/mainDir.css">
+    <script defer src="js/face-api.js"></script>
+    <script defer src="js/mainDir.js"></script>
+
+
+</head>
+
+<body>
+
+    <!-- Section heading  -->
+    <header>
+        <div class="header-logo">
+
+            <img src="images/sefad.jpg" alt="Logo SEFAD">
+
+
+        </div>
+
+    </header>
+    <div id="contenedor_fecha_hora" class="contenedor_fecha_hora">
+        <% if(usuario){ %>
+           
+            <p id="codigo"><%=usuario.codigo%></p> 
+            <p id="correo"><%=usuario.correo%></p>
+            <p id="nombre"><%=usuario.nombre%></p>
+            <% }%>
+        <p id="fecha_hora"></p>
+        <a id="cambio_clave" onclick="cambio_clave()" href="#">Cambiar Contraseña</a>
+        <a href="/">Cerrar Sesion</a>
+
+    </div>
+
+    <div class="divVideo">
+
+        <video id="video" width="720" height="560" autoplay muted></video>
+
+    </div>
+
+
+    <div class='divCanvas'>
+
+        <canvas id="micanvas"></canvas>
+
+    </div>
+
+
+    <div class="divBotones">
+
+
+
+        <button id="boton-estado-estudiantes" class="btn btn-primary w-50">Gestion de Estudiantes</button>
+        <button id="boton-estadisticas" class="btn btn-primary w-50">Estadisticas</button>
+        <button id="boton-registrar-usuario" class="btn btn-primary w-50">Registrar Usuario</button>
+
+
+    </div>
+
+
+    </div>
+
+    <a href="#" id="boton-reportar" class="btn-flotante">Reportar Ausente</a>
+</body>
+
+</html>

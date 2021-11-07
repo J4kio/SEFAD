@@ -1,0 +1,113 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+body {
+    background: white;
+    font-family: "Titillium Web", sans-serif;
+}
+
+
+.contenedor {
+    height: 500px;
+    width: 700px;   
+    position: relative;
+    box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+    padding: 10px;
+    margin: 40px auto;
+    border-radius: 6px;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header {
+    margin: 5px 0;
+    padding: 0 50px;
+    display: flex;
+    flex-direction: row;
+}
+
+header .header-logo {
+    padding: 20px 0;
+    padding-right: 20px;
+}
+a
+{
+    position: relative;
+    left: 93%;
+
+}
+
+header .header-logo a {
+    display: flex;
+    align-items: center;
+}
+
+header .header-logo a img {
+    height: 100px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+
+
+.btn {
+    margin-top: 20px ;
+    width: 200px;
+}
+.fecha-hora{
+    margin: 10px;
+}
+#datos{
+    display: flex;
+}
+#datos_estudiante  {
+    background: rgba(224, 224, 224, 0.9);
+    margin-left: 10px;
+    border-radius: 6px;
+    height: 250px;
+    width: 250px;
+    padding: 10px;        
+    box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3); 
+    display: block;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+#datos_especialista  {
+    background: rgba(224, 224, 224, 0.9);    
+    margin-left: 10px;
+    border-radius: 6px;
+    height: 250px;
+    width: 250px;
+    padding: 10px;        
+    box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3); 
+    display: block;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+#input_lugar {
+    width: 55%;
+}
+input{
+    width: 55%;
+}

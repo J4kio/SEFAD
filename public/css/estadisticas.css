@@ -1,0 +1,100 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+body {
+    background: white;
+    font-family: "Titillium Web", sans-serif;
+    
+}
+a{
+    display: block;
+}
+
+header {
+    margin: 5px 0;
+    padding: 0 50px;
+    display: block;
+    flex-direction: row;
+}
+
+header .header-logo {
+    padding: 20px 0;
+    padding-right: 20px;
+}
+
+header .header-logo a {
+    display: flex;
+    align-items: center;
+}
+
+header .header-logo a img {
+    height: 100px;
+}
+
+h1 {
+    text-align: center;
+    font-weight: normal;
+    font-weight: bold;    
+    font-size: 25px;
+    font-style: oblique;
+    display: flex;
+    justify-content: center;
+}
+p{
+    font-size: 14px;
+    margin: 1px;
+}
+
+button{
+    margin: 5px;
+}
+
+.fecha_hora {
+    background: rgba(224, 224, 224, 0.9);
+    padding: 40px;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+    width: 300px;
+    height: auto;
+    float: right;
+    margin: 20px;
+    display: flex;
+}
+.contenedor_fecha_hora {
+    background: rgba(224, 224, 224, 0.9);
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+    width: 300px;
+    height: auto;  
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 20px;
+}
+#botones{
+    text-align: center;
+    margin: 25px;
+}
+
+
+#grafica {
+    margin-inline: auto;
+    display: block;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    width: 600px;
+    height: 600px;
+}
+#titulo{
+    margin: 30px;
+}

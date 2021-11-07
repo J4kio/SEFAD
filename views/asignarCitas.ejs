@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEFAD | Consulta </title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/asignarCitas.css">
+
+
+
+</head>
+
+<body>
+
+
+  <!-- Section heading  -->
+  <header>
+    <div class="header-logo">
+
+      <img src="images/sefad.jpg" alt="Logo SEFAD">
+
+
+    </div>
+
+  </header>
+  <h1>Asignacion de citas</h1>
+
+
+  <div class="contenedor">
+    <div id="datos">    
+    <div id="datos_estudiante">
+      <h2>Datos Estudiante</h2>
+      <p id="nombre_estudiante"><%= estudiante.nombre%></p>
+      <p id="id_estudiante"><%= estudiante.id%></p>
+      <p id="email_estudiante"><%= estudiante.email%></p>
+      <input id ="nombre_estudiante" type="hidden" value="<%= estudiante._id%>">
+    </div>
+    <div id="datos_especialista">
+      <h2>Datos Especialista</h2>
+      <p id="nombre_especialista"><%= especialista.nombre%></p>
+      <p id="codigo_especialista"><%= especialista.codigo%></p>
+      <p id="correo_especialista"><%= especialista.correo%></p>
+      <input id ="nombre_especialista"type="hidden" value="<%= especialista._id%>">
+    </div>
+  </div>
+    
+    <input id ="fecha" type="date" class="fecha-hora" id="fecha" value="2021-10-30" min="2021-10-30" max="2050-10-30">
+    <input id ="hora" type="time" class="fecha-hora" id="hora" min="07:00" max="21:00" step="3600" />
+
+  
+
+    <label>
+      Lugar<span class="req">*</span>
+    </label>
+    <select id = "select" class="form-select" aria-label="Default select example">
+      <option value="Bienestar Oficina 1">Bienestar Oficina 1</option>      
+      <option value="Bienestar Oficina 2">Bienestar Oficina 2</option>
+      <option value="Bienestar Oficina 3">Bienestar Oficina 3</option>
+      <option value="Bienestar Oficina 4">Bienestar Oficina 4</option>
+    </select>
+
+
+   
+    <button id="boton-agendar" class="btn btn-primary w-50">Agendar</button>
+    
+  </div>
+  <script src="js/asignarCitas.js"></script>
+</body>
+
+</html>

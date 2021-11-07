@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEFAD | Cierre Seguimiento </title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/cierreSeguimiento.css">
+    <script defer src="js/cierreSeguimiento.js"></script>
+   
+
+</head>
+
+<body>
+
+    <!-- Section heading  -->
+    <header>
+        <div class="header-logo">
+
+            <img src="images/sefad.jpg" alt="Logo SEFAD">
+
+
+        </div>
+
+    </header>
+
+    <h1>Informe de Cierre</h1>
+
+    <div class="contenedor">
+      <% if(estudiante && especialista){ %>
+           
+        <p id="nombre_estudiante"><%=estudiante.nombre%></p>
+        <input id ="id_estudiante" type="hidden" value="<%=estudiante.id%>">
+        <input id ="codigo_especialista"type="hidden" value="<%=especialista.codigo%>">      
+        <input id ="nombre_especialista"type="hidden" value="<%=especialista.nombre%>">    
+        <% }%>
+        
+        <textarea id ="caja-texto" class="form-control" rows="12" aria-label="With textarea"></textarea>
+
+        <div class ="radio-butons">  
+          <p>Evaluacion del seguimiento</p>
+      
+              <div class="form-check">
+                  <input class="form-check-input" type="radio" value ="1"  name="flexRadioDefault" id="flexRadioDefault1">
+                  <label class="form-check-label" for="flexRadioDefault1">
+                    1
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" value ="2"  name="flexRadioDefault" id="flexRadioDefault2">
+                  <label class="form-check-label" for="flexRadioDefault1">
+                    2
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" value ="3" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                  <label class="form-check-label" for="flexRadioDefault1">
+                    3
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" value ="4" type="radio" name="flexRadioDefault" id="flexRadioDefault4">
+                  <label class="form-check-label" for="flexRadioDefault1">
+                    4
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input checked value ="5" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault5">
+                  <label class="form-check-label" for="flexRadioDefault1">
+                    5
+                  </label>
+                </div>
+            
+              </div>
+        <button id="boton-cierre" class="btn btn-danger w-50">Cerrar Seguimiento</button>
+    
+
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>

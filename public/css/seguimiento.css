@@ -1,0 +1,77 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+body {
+    background: white;
+    font-family: "Titillium Web", sans-serif;
+}
+
+
+
+
+a{
+    display: block;
+}
+
+
+header {
+    margin: 5px 0;
+    padding: 0 50px;
+    display: flex;
+    flex-direction: row;
+}
+
+header .header-logo {
+    padding: 20px 0;
+    padding-right: 20px;
+}
+
+header .header-logo a {
+    display: flex;
+    align-items: center;
+}
+
+header .header-logo a img {
+    height: 100px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 90px;
+}
+p{
+    font-size: 15px;
+}
+.contenedor {
+    background: rgba(224, 224, 224, 0.9);
+    padding: 40px;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+    width: 22vw;
+    height: 80vh;
+    margin: 10px;
+}
+
+.btn {
+    margin: 10px;
+    width: 500px;
+    height: 200px;
+}
+.contenedor_fecha_hora {
+    background: rgba(224, 224, 224, 0.9);
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+    width: 300px;
+    height: auto;
+    float: left;
+    margin: 20px;
+    display: block;
+}
