@@ -273,3 +273,50 @@ function actualizar() { //función del temporizador
     mireloj.innerHTML = "Hora Actual: " + mihora + "<br>Fecha Actual: " + fecha.getDate() + '-' + (fecha.getMonth() + 1) + '-' + fecha.getFullYear(); //incluir hora en elemento
 }
 setInterval(actualizar, 1000); //iniciar temporizador
+$("#boton-reiniciar").click(function (e) {
+
+    Swal.fire({
+        title: '¿Estas Seguro?',
+        text: "Esta Accion NO se podra deshacer",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Si, Reiniciar'
+      }).then((result) => {
+        if (result.isConfirmed) {   
+
+            reiniciarEstadisticas()
+        }
+      })
+
+  });
+  
+  function reiniciarEstadisticas(){
+    $.ajax({
+        url: "/reiniciar_estadisticas",
+        method: 'POST',
+        contentType: "application/json; charset=utf-8",
+        data: JSON.stringify(
+            {}
+        )
+    })
+        .done(function () {
+
+            Swal.fire(
+                'Hecho',
+                'Estadisticas Reiniciadas Correctamente',
+                'success'
+              )
+
+        })
+        .fail(function () {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Algo Salio Mal.',
+
+            })
+
+        });
+  }

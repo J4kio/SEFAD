@@ -795,7 +795,30 @@ app.post('/agregar_aparecido_mujer', (req, res) => {
         })
    
 })
+app.post('/reiniciar_estadisticas', (req, res) => {
+   //const body = req.body
+    estadisticas.updateOne({},{
 
+      
+        numero_desaparecidos:0,
+        numero_aparecidos:0,
+        seguimientos_activos:0,
+        seguimientos_finalizados:0,
+        hombres_aparecidos:0,
+        hombres_desaparecidos:0,
+        mujeres_aparecidas:0,
+        mujeres_desaparecidas:0
+        
+        
+    })
+
+        .then(function (registro) {           
+            res.json(registro)
+        }).catch(function () {
+            res.json({ mensaje: 'Error' })
+        })
+   
+})
 app.listen(app.get('port'), () => {
 
     console.log('Servidor en puerto: ', app.get('port'))
